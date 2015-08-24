@@ -51,8 +51,20 @@ $( document ).ready(function() {
 
         //number to be guessed
         randomNum = Math.floor((Math.random() * 10) + 1);
-        console.log(guess, bet);
-        playerMoney /= 2;
+
+        //console.log(randomNum, guess);
+        
+        switch(guess){
+          case randomNum:
+            playerMoney += bet
+            break;
+          case randomNum + 1:
+          case randomNum - 1:
+            break;
+          default:
+            playerMoney -= bet
+        }
+
         updatePlayerStatus(playerMoney);
 
         //let the player know it's over
@@ -63,7 +75,7 @@ $( document ).ready(function() {
       }else{
 
         updateGameMessage(error_msg);
-        
+
       }
 
     });

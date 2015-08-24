@@ -5,16 +5,14 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div id = "player_message"></div>
+    <div id = "player_status"></div>
+    <div id = "game_message"></div>
     <form id = "game_form">
-      <label for="guess">Enter your guess:</label>
-      <input type="text" name="guess" />
+      <label for="guess" >Enter your guess:</label>
+      <input type="text" name="guess" id="guess" value = "0"/>
       <br /><br />
       <label for="bet">Enter your bet:</label>
-      <select name="bet">
-        <option selected="selected">5</option>
-        <option>10</option>
-      </select>
+      <input type="text" name="bet" id="bet" value = "5"/>
       <br /><br />
       <input type="submit" value="Submit" />
     </form>
